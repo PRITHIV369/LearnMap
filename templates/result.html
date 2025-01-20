@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Prediction Result for {{ skill }}</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* h1 {
+    color: #333;
+    margin-bottom: 20px;
+} */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77d94c 3px solid;
+    text-align: center;
+    margin:0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+}
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+.header{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+}
+
+        </style>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="container">
+                <h1>Personalized Learning Path Planner</h1>
+            </div>
+        </header>
+    </div>
+    <br>
+    <br>
+    <h1 style="margin: 20px;">Prediction Result for {{ skill }}</h1>
+    <center>
+<br><br><br><br>
+        <div style="border:2px solid black;width: fit-content;padding: 10px;border-radius:20px ;border-style: dotted;text-align: left;">
+            <ul>
+                {% for key, value in result.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/selectskills">Back to Skill Selection</a>
+        </div>
+    </center>
+</body>
+</html>

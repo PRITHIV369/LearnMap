@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Select Skill</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+}
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+/* .container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* h1 {
+    color: #333;
+    margin-bottom: 20px;
+} */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #77d94c;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 150px;
+}
+button:hover {
+    background-color: #66c042;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #5cb537;
+    transform: scale(0.95);
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77d94c 3px solid;
+    text-align: center;
+    margin:0;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.header{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="container">
+                <h1>Personalized Learning Path Planner</h1>
+            </div>
+        </header>
+    </div>
+    <div style="margin-left: 15px;margin-right: 15px;">
+    <br>
+    <h1>Select a Skill</h1>
+    <br>
+
+        <small style="line-height: 1.6;">
+            "Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!".Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!.Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!
+            Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!".Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!.Welcome to the skill selection page. Please choose a skill to explore. This page allows you to select a skill from a list of options. Click on a skill to learn more about it. Explore various skills such as Yoga, Cricket, Programming, Swimming, and Cooking. Each skill offers unique learning opportunities. Select a skill to begin your journey. Dive into the world of skills and enhance your knowledge. Click on a skill to get started. Enjoy learning and exploring new skills!"
+        </small>
+        <br>
+        <br>
+        <center>
+            <button onclick="location.href='{{ url_for('yoga') }}'">Yoga</button>
+            <button onclick="location.href='{{ url_for('cricket') }}'">Cricket</button>
+            <button onclick="location.href='{{ url_for('programming') }}'">Programming</button>
+            <button onclick="location.href='{{ url_for('swimming') }}'">Swimming</button>
+            <button onclick="location.href='{{ url_for('cooking') }}'">Cooking</button>
+            </div><br>
+        </center>
+</body>
+</html>

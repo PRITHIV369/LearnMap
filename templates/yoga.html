@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Prediction for {{ skill }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="container">
+                <h1>Personalized Learning Path Planner</h1>
+            </div>
+        </header>
+    </div>
+    <br>
+    <div style="margin-left: 15px;margin-right: 15px;">
+        <h1>Enter Details for {{ skill }}</h1>
+        <small>
+            "Prediction Result for {{ skill }}. Here are the predicted outcomes for the selected skill. This page displays the prediction result based on the details you provided. Explore the predicted outcomes for {{ skill }}. Gain insights into the expected outcomes for {{ skill }}. The prediction result provides valuable information about {{ skill }}. Check the predicted outcomes to plan your learning path. Use the prediction result to guide your skill development journey. Get an overview of the predicted outcomes for {{ skill }}. Use the prediction result to make informed decisions about {{ skill }}.Prediction Result for {{ skill }}. Here are the predicted outcomes for the selected skill. This page displays the prediction result based on the details you provided. Explore the predicted outcomes for {{ skill }}. Gain insights into the expected outcomes for {{ skill }}. The prediction result provides valuable information about {{ skill }}. Check the predicted outcomes to plan your learning path. Use the prediction result to guide your skill development journey. Get an overview of the predicted outcomes for {{ skill }}. Use the prediction result to make informed decisions about {{ skill }}."
+        </small>
+    </div>
+    <br>
+    <br>
+    <form method="post">
+        <label for="level">Level:</label>
+        <select id="level" name="level">
+            <option></option>
+            <option value="1">Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Advanced</option>
+        </select><br><br>
+
+        <label for="style">Style:<small>(Learning style)</small></label>
+                <select id="style" name="style">
+                    <option></option>
+                    <option value="video">Video</option>
+                    <option value="text">Text</option>
+                    <option value="kinesthetic">Kinesthetic</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                <label for="time">Available Time (hours/week):</label>
+                <select id="time" name="time">
+                    <option></option>
+                    <option value="3-5">3-5</option>
+                    <option value="5-8">5-8</option>
+                    <option value="8-11">8-11</option>
+                    <option value="11-15">11-15</option>
+                    <option value="15-24">15-24</option>
+                    <option value="24+">24+</option>
+                </select><br><br>
+                <label for="requirement">Requirement <small>(Definite needs)</small>:</label>
+                <input type="radio" id="requirement_yes" name="requirement" value="Yes">
+                <label for="requirement_yes">Yes</label>
+                <input type="radio" id="requirement_no" name="requirement" value="No">
+                <label for="requirement_no">No</label><br><br>
+                <label for="access">Access <small>(A Mentor and etc.)</small>:</label>
+                <input type="radio" id="access_yes" name="access" value="Yes">
+                <label for="access_yes">Yes</label>
+                <input type="radio" id="access_no" name="access" value="No">
+                <label for="access_no">No</label><br><br>
+                <label for="age">Age:</label>
+                <select id="age" name="age">
+                    <option></option>
+                    <option>13 below</option>
+                    <option>18 below</option>
+                    <option>18-25</option>
+                    <option>25-33</option>
+                    <option>33-44</option>
+                    <option>44-60</option>
+                    <option>60 plus</option>
+                </select><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+
+        <label for="goal">Goal:</label>
+        <select id="goal" name="goal">
+            <option></option>
+            <option value="To increase the fexibility of my body">To increase the fexibility of my body</option>
+            <option value="To win a yoga competition">To win a yoga competition</option>
+            <option value="To increase the fexibility of my body">To win a yoga competition</option>
+            <option value="To be healthy">To be healthy</option>
+            <option value="other">other</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if result %}
+        <h2>Prediction Result:</h2>
+        <ul>
+            {% for key, value in result.items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

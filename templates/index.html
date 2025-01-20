@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning Path Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personalized Learning Path Planner</h1>
+
+        </div>
+    </header>
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Customized Learning Paths</h3>
+                <p>Get a personalized learning plan based on your skills, goals, and available time.</p>
+            </div>
+            <div class="feature">
+                <h3>Recommendations</h3>
+                <p>Our ML model analyzes your progress and adjusts your learning path to ensure optimal learning.</p>
+            </div>
+            <div class="feature">
+                <h3>Overcome the challenges</h3>
+                <p>Our ML-model find your challenges and you can overcome those challenges.</p>
+            </div>
+        </div>
+    </section>
+    <center>
+        <button onclick="location.href='{{ url_for('selectskills') }}'">GET STARTED</button>
+    </center>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Personalized Learning Path Planner. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
